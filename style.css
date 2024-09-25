@@ -1,16 +1,21 @@
 body {
-    margin: 0%;
-    padding: 0%;
- 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 #container {
     display: grid;
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
     border: 1px #e94653 solid;
-    height: 100vh;
-    width: 100vw;
-   
+    height: 100%;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+
+    
    }
    .cell {
     border: 0.5px black solid;
@@ -32,6 +37,12 @@ body {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 13;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
    }
 
    #inputuser {
@@ -40,6 +51,11 @@ body {
     grid-row-end: 10;
     grid-column-start: 4;
     grid-column-end: 6;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
    }
 
    #inputtrips {
@@ -48,12 +64,39 @@ body {
         grid-row-end: 10;
         grid-column-start: 7;
         grid-column-end: 9;
+        background-color: white;
+       
+        
+        
        }
    
        #titre {
 
         display: flex;
         flex-direction: row;
-        height: 100vh;
-        width: 100vw;
+        text-align: center;
+
+       }
+       .rowstrips {
+        display: flex;
+        flex-direction: row;
+        border: 0.5px black solid;
+        border-radius: 8px;
+        background-color: rgb(95, 87, 87);
+        justify-content: space-around;
+        padding: 10px;
+       }
+
+       #buttonbook {
+        background-color: green;
+       }
+       p {
+        color: white;
+       }
+       #cadre-user {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
        }
