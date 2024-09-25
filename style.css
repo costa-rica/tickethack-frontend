@@ -23,12 +23,15 @@ body {
    }
    
    #header {
-    
+    display: flex;
+    justify-content: space-between;
     border: 0.5px black solid;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 13;
+    background-color: white;
+    padding: 30px;
    }
 
    #bandeau {
@@ -100,3 +103,38 @@ body {
         align-items: center;
         
        }
+
+
+
+.header-right-side{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+.header-left-side{
+    color:green;
+    font-size: larger;
+}
+
+#container-cart{
+    height: 100%;
+}
+#container-cart-sub{
+    background-color: beige;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myCartDiv{
+    background-color: white;
+    width: 30%;
+    height: 20%;
+}
+
+.buttoncart{
+
+}
+
+

@@ -6,6 +6,8 @@ const calandar = document.querySelector('#calandar')
 
 buttonsearch.addEventListener('click', 
     function(){
+        console.log(`calandar: ${calandar.value}`)
+
         fetch("http://localhost:3000/trips/search/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
