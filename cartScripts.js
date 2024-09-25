@@ -46,6 +46,7 @@ function getCartTrips() {
                 button.addEventListener("click", function () {
                     const tripId = this.id
                     console.log(tripId);
+                    console.log("--- buttons clicked")
                     
                 })
             }
