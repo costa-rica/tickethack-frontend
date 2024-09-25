@@ -2,10 +2,11 @@ const arrival =  document.querySelector('#arrival')
 const  departure =  document.querySelector('#departure')
 const buttonsearch = document.querySelector('#buttonsearch')
 const calandar = document.querySelector('#calandar')
-
+const buttonbook= document.querySelectorAll(".buttonbook")
 
 buttonsearch.addEventListener('click', 
     function(){
+        console.log(calandar.value)
         fetch("http://localhost:3000/trips/search/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -17,22 +18,30 @@ buttonsearch.addEventListener('click',
         })
             .then((response) => response.json())
             .then((data) => {
-               console.log('donées recus chitos')
-               console.log(data)
+              for( let trips of data.tripsArray) {
+               
+  document.querySelector("#inputtrips").innerHTML += `
+            <div class="rowstrips">
+            <div>${trips.arrivalDeparture}</div>
+            <div>${trips.time}</div>
+            <div>${trips.price}</div>
+            <button id=${trips.tripId} type="button">book</button>
+            </div>
+  `
+                document.querySelector(`#${trips.tripsId}`).addEventListener('click',
+                    function(){ 
+                        console.log(chitos)
+                    }
+                )
+}
+              })
             })
-        // document.querySelector('#departure')
-        // console.log(departure.value)
-        // console.log(arrival.value)
-        // console.log(calandar.value)
-        // console.log(buttonsearch.value)
+    
 
-//     fetch("http://localhost:3000/trips/search/")
-//     .then((Response) => Response.json())
-//     .then((data) => console.log(data))
-// console.log('click')
-    }
+buttonbook.addEventListener('click',
+
+    function () {
+     console.log('Click detected!');
+   }
   );
-// buttonsearch.addEventListener("click", function () {
-//     console.log("test"); // logs the className of my_element
-  
-//   });
+                    

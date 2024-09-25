@@ -65,7 +65,7 @@ body {
         grid-column-start: 7;
         grid-column-end: 9;
         background-color: white;
-       
+        overflow: scroll;
         
         
        }
