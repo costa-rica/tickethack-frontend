@@ -38,7 +38,7 @@ body {
     border: 0.5px black solid;
     grid-row-start: 5;
     grid-row-end: 10;
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: 6;
    }
 
@@ -46,7 +46,14 @@ body {
         border: 0.5px black solid;
         grid-row-start: 5;
         grid-row-end: 10;
-        grid-column-start: 9;
-        grid-column-end: 12;
+        grid-column-start: 7;
+        grid-column-end: 9;
        }
    
+       #titre {
+
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+       }
