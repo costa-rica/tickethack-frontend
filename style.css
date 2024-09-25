@@ -1,0 +1,52 @@
+body {
+    margin: 0%;
+    padding: 0%;
+ 
+}
+#container {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    border: 1px #e94653 solid;
+    height: 100vh;
+    width: 100vw;
+   
+   }
+   .cell {
+    border: 0.5px black solid;
+    text-align: center;
+   }
+   
+   #header {
+    
+    border: 0.5px black solid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+   }
+
+   #bandeau {
+    border: 0.5px black solid;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 13;
+   }
+
+   #inputuser {
+    border: 0.5px black solid;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    grid-column-start: 3;
+    grid-column-end: 6;
+   }
+
+   #inputtrips {
+        border: 0.5px black solid;
+        grid-row-start: 5;
+        grid-row-end: 10;
+        grid-column-start: 9;
+        grid-column-end: 12;
+       }
+   
